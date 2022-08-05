@@ -1,0 +1,23 @@
+hoge/
+  ├ build/
+  ├ main.cpp
+  └ CMakeList.txt
+
+build配下でMakefileを生成する時は、hoge/buildにいる状態で，
+$ cmake ..
+とコマンドラインで入力する．
+..とするのは，CMakeList.txtを指すディレクトリを指定するためである．
+
+cmakeを実行したディレクトリにMakefileは生成される．
+その後，今回であればhoge/buildにいる状態で，
+$ make
+とコマンドライン入力することで実行ファイルの生成が行われる．
+
+※今回buildディレクトリを生成した理由
+hoge/にいる状態で，
+$ cmake .
+$ make
+とコマンドライン入力しても，同じようにMakefileの生成およびバイナリの生成はできるが，
+hoge/配下にcmake実行時の生成物ができてしまう．
+そのため，意図して生成物とディレクトリをわけるようにしている．
+gitで登録する際も.gitignoreに build/* と記載しておくことで追跡ファイルからも一括で除外することができる．
