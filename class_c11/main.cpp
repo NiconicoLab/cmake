@@ -31,6 +31,15 @@ CSample::~CSample()
 	printf("~CSample\n");
 }
 
+class CSample2
+{
+public:
+	CSample2(int a, int b) { ; }
+//	explicit CSample2(int a, int b) { ; } // explicitをつけているため暗黙の型変換ができずにコンパイルエラーとなる
+	~CSample2() { ; }
+};
+
+
 class CTest
 {
 public:
@@ -75,6 +84,11 @@ int main()
 	CSample clsB = clsA; // CSample clsB(clsA);でも同じ意味になる
 	
 	clsB = clsA; //  代入のため，コピーコンストラクタとは別物
+
+	// ----------------------------------------------------
+
+	// 初期化子リスト
+	CSample2 clsC = {1, 2};
 
 	// ----------------------------------------------------
 
