@@ -64,7 +64,7 @@ public:
 	// void foo3() override { ; } // NG: A::foo3() は仮想関数ではないためコンパイルエラー
 	// void foo4() override { ; } // NG: A::foo4() は存在しないためコンパイルエラー
 
-	void hoge() override { ; } // 純粋仮想関数
+	void hoge() override { ; } // 純粋仮想関数をオーバーライドする
 };
 
 int main()
