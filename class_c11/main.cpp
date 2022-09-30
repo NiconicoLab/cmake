@@ -5,7 +5,7 @@ class CSample
 public:
 	int x;
 	int y;
-	
+
 	CSample(int a, int b);
 	CSample(const CSample& cls);
 	~CSample();
@@ -81,7 +81,7 @@ int main()
 #if 0 // 純粋仮想関数があるクラスのため，インスタンス化できない
 	CTest ctParent;
 #endif
-	
+
 	CTestChild ctA;
 
 #if 0
@@ -90,6 +90,6 @@ int main()
 	CTestChild ctB;
 	ctB = ctA; // コピーコンストラクタではなく，代入(ムーブ)となるため問題ない
 #endif
-	
+
 	return 0;
 }
