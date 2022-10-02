@@ -17,5 +17,9 @@ int main()
 	}
 	printf("\n");
 
+	auto num = 0; // int 型
+	const auto str = "string"; // strはconst char型
+	std::cout << num << " " << str << std::endl;
+
 	return 0;
 }
